@@ -11,7 +11,7 @@ void is_there_available_required_subset(int *array,int n,long long target_sum)
         {
             if((mask&(1<<i)))sum+=array[i];
         }
-        if(sum==target_sum)
+        if(sum==target_sum)// cheaking required subset
         {
             cout<<"There is available a subset with given condition\n";
             return ;
