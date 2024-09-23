@@ -68,7 +68,7 @@ int best_count(int a,int b)
 }
 int avg(int a,int b)
 {
-    return (a+b)/2.0;
+    return ceil((a+b)/2.0);
 }
 void grade_calculation(int m)
 {
