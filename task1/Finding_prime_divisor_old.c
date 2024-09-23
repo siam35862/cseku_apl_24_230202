@@ -28,14 +28,14 @@ int main()
 
 			if (f!=1)
 			{
-				printf("Prime factor: %d\n",i);
+				printf("Prime divisor: %d\n",i);
                 fl=1;
 			}
         }    
 	
 		
 	}
-    if(fl==0)printf("There is no prime factor.");
+    if(fl==0)printf("There is no prime divisor.");
 
 return 0;
 
