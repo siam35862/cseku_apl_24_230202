@@ -1,0 +1,408 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "schoolManagementSystem.Main#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "schoolManagementSystem.Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1320710170 { 
+   	label=schoolManagementSystem
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1337677255 { 
+   	label=StaffAppointment
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StaffAppointment1320710170XXXappoint0[
+	label="+ appoint()"
+	style=filled
+	fillcolor=white
+	tooltip="StaffAppointment
+
+&#10;  Appoints the staff member by adding them to the staff list.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1380995958 { 
+   	label=StaffList
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StaffList1320710170XXXfindStaffById1808118735[
+	label="+ findStaffById()"
+	style=filled
+	fillcolor=white
+	tooltip="StaffList
+
+&#10;  Finds a staff member by their unique identifier.&#10; &#10;  @param staff_id The unique ID of the staff member to find&#10;  @return The Staff object if found, otherwise null&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1583039046 { 
+   	label=Teacher
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Teacher1320710170XXXshowInformation0[
+	label="+ showInformation()"
+	style=filled
+	fillcolor=white
+	tooltip="Teacher
+
+&#10;  Displays the information of the teacher, including personal details,&#10;  designation, subject, allowance, and pay scale.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1587579528 { 
+   	label=TeacherList
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TeacherList1320710170XXXfindTeacherById1808118735[
+	label="+ findTeacherById()"
+	style=filled
+	fillcolor=white
+	tooltip="TeacherList
+
+&#10;  Finds a teacher by their unique ID.&#10; &#10;  @param teacher_id The unique ID of the teacher to be found&#10;  @return The Teacher object if found, otherwise null&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1824447775 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main1320710170XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2022607853 { 
+   	label=Student
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Student1320710170XXXshowInformation0[
+	label="+ showInformation()"
+	style=filled
+	fillcolor=white
+	tooltip="Student
+
+&#10;  Displays the student's complete information, including group information&#10;  for classes Nine and Ten.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2038713733 { 
+   	label=TeacherAppointment
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TeacherAppointment1320710170XXXappoint0[
+	label="+ appoint()"
+	style=filled
+	fillcolor=white
+	tooltip="TeacherAppointment
+
+&#10;  Appoints the teacher by adding them to the teacher list.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_400559135 { 
+   	label=Admission
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Admission1320710170XXXnewAdmission1274516181[
+	label="+ newAdmission()"
+	style=filled
+	fillcolor=white
+	tooltip="Admission
+
+&#10;  Admits a new student with a specified group.&#10; &#10;  @param name the name of the student&#10;  @param student_idthe unique ID for the student&#10;  @param _classthe class or grade of the student&#10;  @param section the section within the class&#10;  @param group the study group (e.g., \"Science\") of the student&#10;  @param genderthe gender of the student&#10;  @param email_adress the email address of the student&#10;  @param mobile_number the mobile number of the student&#10;  @param blood_group the blood group of the student&#10;  @param address the address of the student&#10;  @param date_of_birth the birth date of the student&#10;  @param date_of_admission the admission date of the student&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_427056777 { 
+   	label=Appointment
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Appointment1320710170XXXcommittee2065861617[
+	label="+ committee()"
+	style=filled
+	fillcolor=white
+	tooltip="Appointment
+
+&#10;  Accepts an EmployeeAppointment object and calls its appoint method.&#10; &#10;  @param empapt an instance of EmployeeAppointment (or its subclass)&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_613265897 { 
+   	label=EmployeeAppointment
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   EmployeeAppointment1320710170XXXappoint0[
+	label="+ appoint()"
+	style=filled
+	fillcolor=white
+	tooltip="EmployeeAppointment
+
+&#10;  Abstract method for appointing an employee.&#10;  Subclasses must provide their own implementation of this method.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_717206856 { 
+   	label=Staff
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Staff1320710170XXXshowInformation0[
+	label="+ showInformation()"
+	style=filled
+	fillcolor=white
+	tooltip="Staff
+
+&#10;  Displays the information of the staff member, including personal and staff details.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_737176941 { 
+   	label=FinancialDepartment
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FinancialDepartment1320710170XXXpayMonthlySalaryToStaff1808118735[
+	label="+ payMonthlySalaryToStaff()"
+	style=filled
+	fillcolor=white
+	tooltip="FinancialDepartment
+
+null"
+	fontcolor=darkgreen
+];
+
+FinancialDepartment1320710170XXXpayMonthlySalaryToTeacher1808118735[
+	label="+ payMonthlySalaryToTeacher()"
+	style=filled
+	fillcolor=white
+	tooltip="FinancialDepartment
+
+null"
+	fontcolor=darkgreen
+];
+
+FinancialDepartment1320710170XXXpayStipendToStudent1808118735[
+	label="+ payStipendToStudent()"
+	style=filled
+	fillcolor=white
+	tooltip="FinancialDepartment
+
+null"
+	fontcolor=darkgreen
+];
+
+FinancialDepartment1320710170XXXreceiveMonthlyFeeFromStudent1808118735[
+	label="+ receiveMonthlyFeeFromStudent()"
+	style=filled
+	fillcolor=white
+	tooltip="FinancialDepartment
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_7652599 { 
+   	label=PaymentService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PaymentService1320710170XXXcollectFee1142137748[
+	label="+ collectFee()"
+	style=filled
+	fillcolor=white
+	tooltip="PaymentService
+
+&#10;  Collects the fee from a student or user.&#10;  @param amount The fee amount to be collected.&#10;  @param trxID The transaction ID associated with the fee collection.&#10; "
+	fontcolor=darkgreen
+];
+
+PaymentService1320710170XXXpayAmount1142137748[
+	label="+ payAmount()"
+	style=filled
+	fillcolor=white
+	tooltip="PaymentService
+
+&#10;  Processes the payment of a specified amount.&#10;  @param amount The amount to be paid.&#10;  @param trxID The transaction ID associated with the payment.&#10;  This class follows the Dependency Inversion Principle (DIP) by depending on the interface.&#10;  We invoke collectFee(),payAmount() method from its corresponding interface reference&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_892905647 { 
+   	label=StudentList
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   StudentList1320710170XXXaddStudent1852455360[
+	label="+ addStudent()"
+	style=filled
+	fillcolor=white
+	tooltip="StudentList
+
+&#10;  Adds a student to the student list with a specified group.&#10; &#10;  @param student The student to be added&#10;  @param group The group to be assigned to the student&#10; "
+	fontcolor=darkgreen
+];
+
+StudentList1320710170XXXfindStudentById1808118735[
+	label="+ findStudentById()"
+	style=filled
+	fillcolor=white
+	tooltip="StudentList
+
+&#10;  Finds a student by their unique identifier.&#10; &#10;  @param student_id The unique ID of the student to find&#10;  @return The Student object if found, otherwise null&#10; "
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Admission1320710170XXXnewAdmission1274516181 -> StudentList1320710170XXXaddStudent1852455360;
+Appointment1320710170XXXcommittee2065861617 -> EmployeeAppointment1320710170XXXappoint0;
+EmployeeAppointment1320710170XXXappoint0 -> StaffAppointment1320710170XXXappoint0;
+EmployeeAppointment1320710170XXXappoint0 -> TeacherAppointment1320710170XXXappoint0;
+FinancialDepartment1320710170XXXpayMonthlySalaryToStaff1808118735 -> StaffList1320710170XXXfindStaffById1808118735;
+FinancialDepartment1320710170XXXpayMonthlySalaryToTeacher1808118735 -> PaymentService1320710170XXXpayAmount1142137748;
+FinancialDepartment1320710170XXXpayMonthlySalaryToTeacher1808118735 -> TeacherList1320710170XXXfindTeacherById1808118735;
+FinancialDepartment1320710170XXXpayStipendToStudent1808118735 -> StudentList1320710170XXXfindStudentById1808118735;
+FinancialDepartment1320710170XXXreceiveMonthlyFeeFromStudent1808118735 -> PaymentService1320710170XXXcollectFee1142137748;
+FinancialDepartment1320710170XXXreceiveMonthlyFeeFromStudent1808118735 -> StudentList1320710170XXXfindStudentById1808118735;
+Main1320710170XXXmain1859653459 -> Admission1320710170XXXnewAdmission1274516181;
+Main1320710170XXXmain1859653459 -> Appointment1320710170XXXcommittee2065861617;
+Main1320710170XXXmain1859653459 -> FinancialDepartment1320710170XXXpayMonthlySalaryToStaff1808118735;
+Main1320710170XXXmain1859653459 -> FinancialDepartment1320710170XXXpayMonthlySalaryToTeacher1808118735;
+Main1320710170XXXmain1859653459 -> FinancialDepartment1320710170XXXpayStipendToStudent1808118735;
+Main1320710170XXXmain1859653459 -> FinancialDepartment1320710170XXXreceiveMonthlyFeeFromStudent1808118735;
+Main1320710170XXXmain1859653459 -> Staff1320710170XXXshowInformation0;
+Main1320710170XXXmain1859653459 -> StaffList1320710170XXXfindStaffById1808118735;
+Main1320710170XXXmain1859653459 -> Student1320710170XXXshowInformation0;
+Main1320710170XXXmain1859653459 -> StudentList1320710170XXXfindStudentById1808118735;
+Main1320710170XXXmain1859653459 -> Teacher1320710170XXXshowInformation0;
+Main1320710170XXXmain1859653459 -> TeacherList1320710170XXXfindTeacherById1808118735;
+    
+}
+@enduml
